@@ -5,14 +5,24 @@ import tiktoken
 
 
 # Streamlit UI
-st.title("Text Splitter Playground")
-st.info("""Split a text into chunks using a **Text Splitter**. Parameters include:
+# st.title("Text Splitter Playground")
+# st.info("""Split a text into chunks using a **Text Splitter**. Parameters include:
 
-- `chunk_size`: Max size of the resulting chunks (in either characters or tokens, as selected)
-- `chunk_overlap`: Overlap between the resulting chunks (in either characters or tokens, as selected)
-- `length_function`: How to measure lengths of chunks, examples are included for either characters or tokens
-- The type of the text splitter, this largely controls the separators used to split on
-""")
+# - `chunk_size`: Max size of the resulting chunks (in either characters or tokens, as selected)
+# - `chunk_overlap`: Overlap between the resulting chunks (in either characters or tokens, as selected)
+# - `length_function`: How to measure lengths of chunks, examples are included for either characters or tokens
+# - The type of the text splitter, this largely controls the separators used to split on
+# """)
+
+st.title("Text Splitter 테스트")
+st.info("""**Text Splitter**를 사용하여 텍스트를 청크로 분할합니다. 매개변수는 다음과 같습니다:
+
+ - `chunk_size`: 결과 청크의 최대 크기(선택한 문자 또는 토큰)
+ - `chunk_overlap`: 결과 청크 사이의 겹침(선택한 문자 또는 토큰)
+ - `length_function`: 청크의 길이를 측정하는 방법, 문자 또는 토큰에 대한 예제가 포함되어 있습니다.
+ - 텍스트 분할기의 유형으로 분할에 사용되는 구분 기호를 크게 제어합니다.
+ """)
+
 col1, col2, col3, col4 = st.columns([1, 1, 1, 2])
 
 with col1:
@@ -85,7 +95,7 @@ else:
 st.info(import_text)
 
 # Box for pasting text
-doc = st.text_area("Paste your text here:")
+doc = st.text_area("테스트할 Text를 입력:")
 
 # Split text button
 if st.button("Split Text"):
